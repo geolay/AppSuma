@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">MiPrimeraApp</string>
+    <string name="app_name" translatable="false">Mi Primera App que pasa</string>
+    <string name="button_name" translatable="false">rojo</string>
+    <string name="text" translatable="false">ESTO ES UN TEXTO</string>
 </resources>

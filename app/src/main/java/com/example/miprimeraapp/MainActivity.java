@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,20 +19,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView miTextView = findViewById(R.id.textViewMain);
-
-        int resultado = add("");
-        Log.d("RESULTADO1", String.valueOf(resultado));
-
-        resultado = add("3");
-        Log.d("RESULTADO2", String.valueOf(resultado));
-        miTextView.setText("El resultado es : " + resultado);
-
-        resultado = add("3,5");
-        Log.d("RESULTADO3", String.valueOf(resultado));
+        EditText miEditText1 = findViewById(R.id.editTextNumber);
+        EditText miEditText2 = findViewById(R.id.editTextNumber2);
+        Button miButton = findViewById(R.id.button);
 
 
-        miTextView.setText("El resultado es : " + resultado);
 
+        miButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                 int numero1 = Integer.parseInt(miEditText1.getText().toString());
+                 int numero2 = Integer.parseInt(miEditText2.getText().toString());
+                 int result = numero1 + numero2;
+                 miTextView.setText("EL resultado es :" + result);
+
+            }
+        });
 
 
     }
