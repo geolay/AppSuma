@@ -3,13 +3,10 @@ package com.example.miprimeraapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,18 +18,48 @@ public class MainActivity extends AppCompatActivity {
         TextView miTextView = findViewById(R.id.textViewMain);
         EditText miEditText1 = findViewById(R.id.editTextNumber);
         EditText miEditText2 = findViewById(R.id.editTextNumber2);
-        Button miButton = findViewById(R.id.button);
+        Button miButton1 = findViewById(R.id.button1);
+        Button miButton2 = findViewById(R.id.button2);
+        Button miButton3 = findViewById(R.id.button3);
+        Button miButton4 = findViewById(R.id.button4);
 
-
-        miButton.setOnClickListener(new View.OnClickListener() {
+        miButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                  int numero1 = Integer.parseInt(miEditText1.getText().toString());
                  int numero2 = Integer.parseInt(miEditText2.getText().toString());
                  int result = numero1 + numero2;
                  miTextView.setText("EL resultado es :" + result);
+            }
+        });
 
+        miButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int numero1 = Integer.parseInt(miEditText1.getText().toString());
+                int numero2 = Integer.parseInt(miEditText2.getText().toString());
+                int result = numero1 - numero2;
+                miTextView.setText("EL resultado es :" + result);
+            }
+        });
+
+        miButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int numero1 = Integer.parseInt(miEditText1.getText().toString());
+                int numero2 = Integer.parseInt(miEditText2.getText().toString());
+                int result = numero1 * numero2;
+                miTextView.setText("EL resultado es :" + result);
+            }
+        });
+
+        miButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int numero1 = Integer.parseInt(miEditText1.getText().toString());
+                int numero2 = Integer.parseInt(miEditText2.getText().toString());
+                int result = numero1 / numero2;
+                miTextView.setText("EL resultado es :" + result);
             }
         });
 
